@@ -134,7 +134,7 @@ function Navbar() {
                 <Link to={'/'} className='flex'>
                   <div className="flex items-center">
                     {/* <img src="/logo.png" alt="" className='h-[45px] w-[45px] ' /> */}
-                    <h1 className=' text-3xl font-bold text-blue-700  px-2 py-1 rounded' >Rich Royal Farm</h1>
+                    <h1 className=' text-xl font-bold text-blue-700  px-2 py-1 rounded' >Rich Royal Farm</h1>
                   </div>
                 </Link>
               </div>
