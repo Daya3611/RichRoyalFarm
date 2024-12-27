@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fonts start -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@200;300;400;500;600;700;800&display=swap" /> -->
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+      </style>
+      
+
+    <!-- Fonts End -->
+    <title>Rich Royal Farm</title>
+    <link rel="manifest" href="/manifest.json" crossorigin="use-credentials" />
+
+    <style>
+      body{
+        font-family: 'parkinsans' , sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+      // Add an event listener to the entire document
+      document.addEventListener("contextmenu", function (e) {
+        e.preventDefault(); // Prevent the default context menu from appearing
+      });
+    </script>
+  </body>
+</html>
