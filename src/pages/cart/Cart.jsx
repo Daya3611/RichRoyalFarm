@@ -136,11 +136,11 @@ function Cart() {
       Amount: ₹${amount}
       Date: ${date}
       Phone Number: ${phoneNumber}
-      cart items: ${cartItems.map((item) => `${item.title} (x${item.quantity})`).join(", ")}
+      cart items: ${cartItems.map((item) => `${item.title} (x ${item.quantity})`).join(", ")}
     `;
     const encodedMessage = encodeURIComponent(message);
-    const phoneNumberWithCountryCode = `919326928336`; 
-    const url = `https://wa.me/${phoneNumberWithCountryCode}?text=${encodedMessage}`;
+    const phoneNumberWithCountryCode = `9326928336`; 
+    const url = `https://wa.me/91${phoneNumberWithCountryCode}?text=${encodedMessage}`;
     window.open(url, '_blank');
   };
 
