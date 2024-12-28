@@ -136,16 +136,17 @@ function Cart() {
       Amount: ₹${amount}
       Date: ${date}
       Phone Number: ${phoneNumber}
+      cart items: ${cartItems.map((item) => `${item.title} (x${item.quantity})`).join(", ")}
     `;
     const encodedMessage = encodeURIComponent(message);
-    const phoneNumberWithCountryCode = `919326928336`; // Replace with actual number
+    const phoneNumberWithCountryCode = `919326928336`; 
     const url = `https://wa.me/${phoneNumberWithCountryCode}?text=${encodedMessage}`;
     window.open(url, '_blank');
   };
 
   return (
     <Layout>
-      <div className="h-screen bg-gray-100 pt-5">
+      <div className="h-[130%] bg-gray-100 pt-5">
         <h1 className="mb-10 text-center text-3xl font-bold">Cart Items</h1>
         <div className="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
           <div className="rounded-3xl md:w-2/3 h-[500px] overflow-auto">
