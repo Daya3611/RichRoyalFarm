@@ -6,6 +6,7 @@ import { toast } from 'react-toastify'
 import { Badge } from "@/components/ui/badge"
 import { Image, ImageDown, Loader, Loader2, Loader2Icon, LoaderPinwheelIcon } from 'lucide-react'
 import { Skeleton } from "@/components/ui/skeleton"
+import { Link } from 'react-router-dom'
 
 export default function ProductCard() {
     const context = useContext(myContext)
@@ -64,13 +65,12 @@ export default function ProductCard() {
                                 if (!uniqueCategories.has(item.category)) {
                                     uniqueCategories.add(item.category);
                                     return (
-                                        <span 
+                                        <Link 
                                             key={item.category} 
-                                            value={filterType}
-                                            onClick={() => setFilterType(item.category)}
+                                            to={`/category/${item.category.toString().toLowerCase().replace(/\s/g, '-')}`}
                                             className={`text-[18px] text-black before:content-[""] hover:before:left-auto hover:before:right-0 hover:before:duration-300 before:h-[2px] before:bg-blue-600 before:w-0 hover:before:w-full before:transition-all before:absolute relative before:left-0 before:-bottom-1 py-1 hover:font-bold hover:text-blue-600 cursor-pointer ${filterType === item.category ? 'text-blue-600 font-bold' : ''} transition-transform duration-300 ease-in-out transform hover:scale-105 capitalize`}>
                                             {item.category}
-                                        </span>
+                                        </Link>
                                     );
                                 }
                                 return null;

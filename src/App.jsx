@@ -22,6 +22,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Allproducts from './pages/allproducts/Allproducts';
 import WholesaleCart from './pages/wholesalecart/Page';
 import Confermorder from './pages/conferm_order/Confermorder';
+import CategoryPage from './pages/category/category-page';
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
             </ProtectedRoute>
           } />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/category/:name" element={<CategoryPage />} />
           <Route path='/wholesalecart' element={<WholesaleCart/>}  />
           <Route path="/dashboard" element={
             <ProtectedRouteForAdmin>
